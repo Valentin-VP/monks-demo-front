@@ -1,25 +1,29 @@
-import React from 'react';
-import styled from 'styled-components';
-import { ModalFooter } from 'react-bootstrap';
+import React from "react";
+import styled from "styled-components";
+import { InputGroup } from "react-bootstrap";
 
 const Styles = styled.div`
-    .footer{
-        margin-top: 30px;
-        background-color: #E87121;
-        border: none;
-        clear: both;
-
-    }
+  .footer {
+    margin-top: 30px;
+    background-color: #e87121;
+    border: none;
+    clear: both;
+    font-family: "Poppins", sans-serif;
+  }
 `;
 
 export const Footer = () => (
-    <Styles>
-        <React.Fragment>
-        <footer class="footer mt-auto py-3">
-            <div class="container">
-                <span class="text-muted">Place sticky footer content here.</span>
-            </div>
-        </footer>
-        </React.Fragment>
-    </Styles>
-)
+  <Styles>
+    <React.Fragment>
+      <footer class="footer mt-auto py-3">
+        <div class="container">
+          <span className="text-muted">
+            <InputGroup>
+              <p>foodMonks@gmail.com</p>
+            </InputGroup>
+          </span>
+        </div>
+      </footer>
+    </React.Fragment>
+  </Styles>
+);
