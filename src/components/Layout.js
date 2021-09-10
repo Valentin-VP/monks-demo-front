@@ -5,7 +5,7 @@ import styled from "styled-components";
 const Styles = styled.div`
   .container {
     margin-top: 70px;
-    min-height: calc(100vh - 100px);
+    min-height: calc(100vh - 126px);
   }
 `;
 

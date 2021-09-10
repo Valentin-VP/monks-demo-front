@@ -2,7 +2,7 @@ import React from "react";
 
 export const About = () => (
   <div>
-    <h2>About</h2>
+    <h2>Sobre el trabajo</h2>
     <p>
       Resulta muy importante el análisis realizado para conocer las
       características fundamentales que permitieron, a las diferentes
