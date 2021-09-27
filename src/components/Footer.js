@@ -13,7 +13,7 @@ export const Footer = () => (
     <React.Fragment>
       <footer class="footer mt-auto py-3">
         <div class="container">
-          <span className="text-muted">foodMonks@gmail.com</span>
+          <span className="text-muted">foodmonksoficial@gmail.com</span>
         </div>
       </footer>
     </React.Fragment>

@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import styled from "styled-components";
 import foodlogo from "../assets/foodLogo.png"; // Tell webpack this JS file uses this image
+import { Noti } from "./Notification";
 
 console.log(foodlogo);
 
@@ -56,7 +57,10 @@ export const NavigationBar = () => (
               <Nav.Link href="/contact">Contacto</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <Nav.Link href="">Registrate</Nav.Link>
+              <Nav.Link onClick={Noti}>Notificacion</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <Nav.Link href="/login">Inicia sesión</Nav.Link>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

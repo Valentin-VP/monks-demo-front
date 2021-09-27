@@ -39,6 +39,7 @@ export const Home = () => (
           <a href="/grafica">Top Restaurantes</a>
         </div>
       </Layout>
+      <noti />
     </React.Fragment>
   </Styles>
 );
