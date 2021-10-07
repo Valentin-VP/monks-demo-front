@@ -2,17 +2,23 @@ import React from "react";
 import { Layout } from "./components/Layout";
 import { Portada } from "./components/Portada";
 import styled from "styled-components";
+import ItemCard from "./components/itemCard";
+import prods from "./productos";
 
 const Styles = styled.div`
   .top {
     text-align: center;
     margin-top: 20px;
+    margin-bottom: 100px;
     a {
       text-decoration: none;
       font-size: 30px;
       font-family: "Poppins", sans-serif;
       color: #0074d9;
     }
+  }
+  .prods {
+    text-align: center;
   }
 `;
 
@@ -39,6 +45,20 @@ export const Home = () => (
           <a href="/grafica">Top Restaurantes</a>
         </div>
       </Layout>
+
+      <h2 className="prods">Productos</h2>
+      <div className="row">
+        {prods.productData.map((item, index) => (
+          <ItemCard
+            className="column"
+            img={item.img}
+            title={item.title}
+            desc={item.desc}
+            precio={item.precio}
+          />
+        ))}
+      </div>
+
       <noti />
     </React.Fragment>
   </Styles>

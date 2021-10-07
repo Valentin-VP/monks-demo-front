@@ -2,6 +2,7 @@ import React from "react";
 import { Navbar, Nav } from "react-bootstrap";
 import styled from "styled-components";
 import foodlogo from "../assets/foodLogo.png"; // Tell webpack this JS file uses this image
+import cartIcon from "../assets/cartIcon.png";
 import { Noti } from "./Notification";
 
 console.log(foodlogo);
@@ -19,6 +20,7 @@ const Styles = styled.div`
     }
     .items {
       margin-left: auto;
+      font-weight: bold;
     }
   }
 
@@ -36,6 +38,18 @@ const Styles = styled.div`
 
     &hover: {
       color: black;
+    }
+  }
+
+  .carrito {
+    margin-top: 5px;
+    #span {
+      position: relative;
+      left: -12px;
+      top: 5px;
+      visibility: shown;
+      color: white;
+      background: #e60000;
     }
   }
 `;
@@ -61,6 +75,16 @@ export const NavigationBar = () => (
             </Nav.Item>
             <Nav.Item>
               <Nav.Link href="/login">Inicia sesión</Nav.Link>
+            </Nav.Item>
+            <Nav.Item>
+              <div class="carrito">
+                <a href="/cart">
+                  <img src={cartIcon} alt="carrito" width="35px" />
+                  <span id="span" className="badge rounded-pill ">
+                    1
+                  </span>
+                </a>
+              </div>
             </Nav.Item>
           </Nav>
         </Navbar.Collapse>

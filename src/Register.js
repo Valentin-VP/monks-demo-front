@@ -1,7 +1,6 @@
 import { React, Fragment } from "react";
 import styled from "styled-components";
 import logo from "./assets/foodMonks-sinfondo.png";
-import { Container } from "react-bootstrap";
 
 const Styles = styled.div`
   .text-center {
@@ -30,6 +29,9 @@ const Styles = styled.div`
     &:hover {
       background-color: #da6416;
     }
+    $:active {
+      background-color: black !important;
+    }
   }
 
   input {
@@ -46,7 +48,15 @@ export const Register = () => (
       <div className="text-center">
         <main className="form-signin">
           <form id="inputs">
-            <img className="mb-4" src={logo} alt="" width="200" height="200" />
+            <a href="/">
+              <img
+                className="mb-4"
+                src={logo}
+                alt=""
+                width="200"
+                height="200"
+              />
+            </a>
             <h1 className="h3 mb-3 fw-normal">Registrate</h1>
 
             <div className="form-floating">
