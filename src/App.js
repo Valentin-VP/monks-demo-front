@@ -6,11 +6,13 @@ import { Register } from "./Register";
 import { About } from "./About";
 import { Contact } from "./Contact";
 import { Grafico } from "./Grafico";
+import { Cart } from "./Cart";
 import { NoMatch } from "./NoMatch";
 import { Layout } from "./components/Layout";
 import { NavigationBar } from "./components/NavBar";
 import { Footer } from "./components/Footer";
 import { toast } from "react-toastify";
+import { CartProvider } from "react-use-cart";
 
 toast.configure();
 function App() {
@@ -23,7 +25,10 @@ function App() {
           <Fragment>
             {/*uso este fragment para poder excluir cosas del header y footer */}
             <NavigationBar />
-            <Route exact path="/" component={Home} />{" "}
+            <CartProvider>
+              <Route exact path="/" component={Home} />{" "}
+              <Route exact path="/cart" component={Cart} />
+            </CartProvider>
             {/* el home tiene su propio layout*/}
             <Layout>
               <Route exact path="/about" component={About} />

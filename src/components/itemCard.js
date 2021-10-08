@@ -1,8 +1,19 @@
 import React from "react";
 import styled from "styled-components";
 import { Button } from "react-bootstrap";
+import { useCart } from "react-use-cart";
 
 const Styles = styled.div`
+  .card {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  img {
+    object-fit: cover;
+    border-radius: 3px 3px 0px 0px;
+  }
+
   .btn-primary {
     color: white;
     background-color: #e87121;
@@ -20,19 +31,22 @@ const Styles = styled.div`
 `;
 
 const ItemCard = (props) => {
+  const { addItem } = useCart();
+
   return (
     <Styles>
-      <div className="col-11 col-md6 col-lg-3 mx-0 mb-4">
-        <div className="card p-0 overflow-hidden h-100 shadow">
-          <img src={props.img} alt="productimg" class="card-im-top img-fluid" />
-          <div className="card-body">
-            <h5 class="card-title">{props.title}</h5>
-            <h5 class="card-subtitle">${props.precio}</h5>
-            <p class="card-text">{props.desc}</p>
-            <Button className="btn-primary margin-auto">
-              Agregar al carrito
-            </Button>
-          </div>
+      <div className="card">
+        <img src={props.img} alt="productimg" height="200" />
+        <div className="card-body">
+          <h5 className="card-title">{props.title}</h5>
+          <h5 className="card-subtitle">$ {props.price}</h5>
+          <p className="card-text">{props.desc}</p>
+          <Button
+            className="btn-primary margin-auto"
+            onClick={() => addItem(props.item)}
+          >
+            Agregar al carrito
+          </Button>
         </div>
       </div>
     </Styles>

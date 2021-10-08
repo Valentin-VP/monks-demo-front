@@ -17,8 +17,14 @@ const Styles = styled.div`
       color: #0074d9;
     }
   }
+
   .prods {
     text-align: center;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
   }
 `;
 
@@ -44,22 +50,25 @@ export const Home = () => (
         <div className="top">
           <a href="/grafica">Top Restaurantes</a>
         </div>
+
+        <h2 className="prods">Productos</h2>
+        <div className="row justify-content-center">
+          {prods.productData.map((item, index) => {
+            return (
+              <div className="column">
+                <ItemCard
+                  img={item.img}
+                  title={item.title}
+                  desc={item.desc}
+                  precio={item.price}
+                  item={item}
+                  key={index}
+                />
+              </div>
+            );
+          })}
+        </div>
       </Layout>
-
-      <h2 className="prods">Productos</h2>
-      <div className="row">
-        {prods.productData.map((item, index) => (
-          <ItemCard
-            className="column"
-            img={item.img}
-            title={item.title}
-            desc={item.desc}
-            precio={item.precio}
-          />
-        ))}
-      </div>
-
-      <noti />
     </React.Fragment>
   </Styles>
 );

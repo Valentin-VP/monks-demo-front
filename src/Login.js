@@ -88,7 +88,7 @@ export const Login = () => (
             <button className="w-100 btn btn-lg btn-primary" type="submit">
               Entrar
             </button>
-            <p class="mt-5 mb-3 text-muted">
+            <p className="mt-5 mb-3 text-muted">
               ¿No tienes cuenta?<a href="/register">Registrate</a>
             </p>
           </form>

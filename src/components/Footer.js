@@ -11,8 +11,8 @@ const Styles = styled.div`
 export const Footer = () => (
   <Styles>
     <React.Fragment>
-      <footer class="footer mt-auto py-3">
-        <div class="container">
+      <footer className="footer mt-auto py-3">
+        <div className="container">
           <span className="text-muted">foodmonksoficial@gmail.com</span>
         </div>
       </footer>

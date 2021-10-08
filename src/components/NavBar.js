@@ -77,7 +77,7 @@ export const NavigationBar = () => (
               <Nav.Link href="/login">Inicia sesión</Nav.Link>
             </Nav.Item>
             <Nav.Item>
-              <div class="carrito">
+              <div className="carrito">
                 <a href="/cart">
                   <img src={cartIcon} alt="carrito" width="35px" />
                   <span id="span" className="badge rounded-pill ">
